@@ -48,6 +48,10 @@ export default class Calculator extends Component{
                 break 
             case '/':
                 values[0] = values[0] / values[1]
+                if(isNaN(values[0]) || isFinite(values[0])){
+                    this.clearMemory()
+                    return
+                }
                 break      
         }
 
